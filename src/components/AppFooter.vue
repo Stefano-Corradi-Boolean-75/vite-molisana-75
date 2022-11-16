@@ -1,9 +1,13 @@
 <script>
+
+import links from '../data/menu';
+
 export default {
   name: 'AppFooter',
   data(){
     return{
-      footerImg: 'footer.jpg'
+      footerImg: 'footer.jpg',
+      links
     }
   },
   methods:{
@@ -20,6 +24,14 @@ export default {
     <div class="cols container">
       <div>
         <img src="/logo-molisana.png" alt="Logo La Molisana">
+      </div>
+      <div class="links">
+        <h4>Menu</h4>
+        <nav>
+          <ul>
+            <li v-for="(link, index) in links" :key="index"><a :href="link.href">{{link.text}}</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="links">
         <h4>Pastificio</h4>

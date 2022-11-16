@@ -3,6 +3,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppMain from './components/AppMain.vue';
+import links from './data/menu';
 
 export default {
   name: 'App',
@@ -10,13 +11,19 @@ export default {
     AppHeader,
     AppFooter,
     AppMain
+  },
+  data(){
+    return{
+      stringSaluto: 'ciao props',
+      links
+    }
   }
 }
 </script>
 
 <template>
   
-  <AppHeader />
+  <AppHeader :menu="links"/>
   <AppMain />
   <AppFooter />
 
@@ -26,5 +33,6 @@ export default {
 <style lang="scss">
 
 @use './style/general';
+
 
 </style>

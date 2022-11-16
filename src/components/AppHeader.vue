@@ -1,30 +1,11 @@
 <script>
 export default {
   name: 'AppHeader',
+  props:{
+    menu: Array
+  },
   data(){
     return{
-      menu:[
-        {
-          text: 'Home',
-          href: '#',
-          current: false
-        },
-        {
-          text: 'Prodotti',
-          href: '#',
-          current: true
-        },
-        {
-          text: 'Chi siamo',
-          href: '#',
-          current: false
-        },
-        {
-          text: 'Contatti',
-          href: '#',
-          current: false
-        },
-      ]
     }
   }
 }
